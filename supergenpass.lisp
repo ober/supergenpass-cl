@@ -12,9 +12,9 @@
 
 (defun sgp-generate (password domain length)
   "Create a unique password for a given domain and master password"
-  (let ((i 0)
-	(initial (format nil "~A:~A" password domain)))
-    (defparameter results (b64-md5 initial))
+  (let* ((i 0)
+	(initial (format nil "~A:~A" password domain))
+        (results (b64-md5 initial)))
     (loop
        ;;(format t "inloop: i:~A results:~A~%" i results)
        (if (and
