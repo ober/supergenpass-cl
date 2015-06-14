@@ -33,7 +33,6 @@
    (ppcre:all-matches "[A-Z]" (subseq results 0 len))
    (ppcre:all-matches "^[a-z]" (subseq results 0 len))))
 
-#+lispworks
 (defun main (&optional args)
   "Primary entry point"
   (let ((master (prompt-for-input "Master:"))
