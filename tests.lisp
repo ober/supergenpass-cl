@@ -41,5 +41,5 @@
      (string= "xaIlcL02A3" (sgp-generate "TheSeasonedSchemer" "slashdot.org" 10))
      (string= "xXuB5haYik" (sgp-generate "ColdAndFluRelief" "flowdock.com" 10))
      (string= "oZ8YbHxSKg" (sgp-generate "LiveLongAndProper" "lisp.org") 10))
-    (message "All Passed")
-  (message "Failures!"))
+    (format t "All Passed")
+  (format t "Failures!"))
