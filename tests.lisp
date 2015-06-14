@@ -42,4 +42,4 @@
      (string= "xXuB5haYik" (sgp-generate "ColdAndFluRelief" "flowdock.com" 10))
      (string= "oZ8YbHxSKg" (sgp-generate "LiveLongAndProper" "lisp.org" 10))
     (format t "All Passed")
-  (format t "Failures!"))
+  (format t "Failures!")))
