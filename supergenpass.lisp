@@ -1,7 +1,5 @@
 (ql:quickload '(:cl-base64 :md5 :cl-ppcre))
 
-
-
 #+lispworks
 (defun prompt-for-input (query)
   (capi:prompt-for-string (format nil "~A" query) :overwrite-character #\$))
@@ -13,7 +11,6 @@
 			  (substitute #\8 #\/
 				      (base64:usb8-array-to-base64-string
 				       (md5:md5sum-string pickle))))))
-
 
 (defun sgp-generate (password domain length)
   "Create a unique password for a given domain and master password"
@@ -37,7 +34,7 @@
    (ppcre:all-matches "^[a-z]" (subseq results 0 len))))
 
 #+lispworks
-(defun main ()
+(defun main (&optional args)
   "Primary entry point"
   (let ((master (prompt-for-input "Master:"))
 	(domain (prompt-for-input "Domain:")))
