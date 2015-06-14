@@ -40,6 +40,6 @@
      (string= "ubRPZrdfu5" (sgp-generate "abcdefg" "cnn.com" 10))
      (string= "xaIlcL02A3" (sgp-generate "TheSeasonedSchemer" "slashdot.org" 10))
      (string= "xXuB5haYik" (sgp-generate "ColdAndFluRelief" "flowdock.com" 10))
-     (string= "oZ8YbHxSKg" (sgp-generate "LiveLongAndProper" "lisp.org") 10))
+     (string= "oZ8YbHxSKg" (sgp-generate "LiveLongAndProper" "lisp.org" 10))
     (format t "All Passed")
   (format t "Failures!"))
