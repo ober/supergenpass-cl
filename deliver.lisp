@@ -10,7 +10,8 @@
   (deliver 'main "supergenpass" 1 :multiprocessing T :keep-eval T ))
 
 #+sbcl
-(sb-ext:save-lisp-and-die "supergenpass" :compression 9 :executable t :toplevel 'main :save-runtime-options t)
+(sb-ext:save-lisp-and-die "supergenpass"  :executable t :toplevel 'main :save-runtime-options t)
+;;(sb-ext:save-lisp-and-die "supergenpass" :compression 9 :executable t :toplevel 'main :save-runtime-options t)
 
 #+(or ccl clisp)
 (progn
