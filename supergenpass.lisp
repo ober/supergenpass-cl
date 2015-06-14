@@ -16,15 +16,13 @@
 	(initial (format nil "~A:~A" password domain)))
     (defparameter results (b64-md5 initial))
     (loop
-     (format t "INLOOP i:~A results:~A~%" i results)
+       ;;(format t "inloop: i:~A results:~A~%" i results)
        (if (and
-	    (> i 9)
+	    (> i 8)
 	    (secure-enough results length))
 	   (return (subseq results 0 length)))
-       (defparameter results (b64-md5 results))
-       (defparameter i (1+ i)))))
-
-
+       (setf results (b64-md5 results))
+       (setf i (1+ i)))))
 
 (defun secure-enough (results len)
   "Ensure the password we have is sufficiently secure"
