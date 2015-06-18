@@ -5,7 +5,12 @@
 
 #+lispworks
 (defun prompt-for-input (query)
-  (capi:prompt-for-string (format nil "~A" query) :overwrite-character #\$))
+  (capi:prompt-for-string (format nil "~A" query) :overwrite-character #\*))
+
+#+lispworks
+(defun copy-to-clipboard (text)
+  (capi:set-clipboard (capi:convert-to-screen nil) text))
+
 
 #+(or sbcl ccl)
 (defun prompt-for-input (query)
@@ -53,4 +58,4 @@
   "Primary entry point"
   (let ((master (prompt-for-input "Master:"))
 	(domain (prompt-for-input "Domain:")))
-    (sgp-generate master domain 10)))
+    (copy-to-clipboard (sgp-generate master domain 10))))
