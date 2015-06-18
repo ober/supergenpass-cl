@@ -7,7 +7,7 @@
 #+lispworks
 (progn
   (load-all-patches)
-  (deliver 'main "supergenpass" 1 :multiprocessing T :keep-eval T ))
+  (deliver 'main "supergenpass" 1 :multiprocessing T :keep-eval T :interface :capi ))
 
 #+sbcl
 (sb-ext:save-lisp-and-die "supergenpass"  :executable t :toplevel 'main :save-runtime-options t)
